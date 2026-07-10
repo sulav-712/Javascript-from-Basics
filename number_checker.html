@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Checker</title>
+</head>
+<body>
+  <form>
+    <label for="number">Enter a number:</label>
+    <input type="text" id="number" name="number"><br><br>
+
+    <button type="submit" onclick="checkNumber()">Submit</button>
+  </form>
+
+  <script>
+    function checkNumber() {
+      let number = document.getElementById("number").value;
+
+      if (isNaN(number) || number == "") {
+        alert("Please enter a valid number");
+      }
+      else {
+        alert("You entered a valid number: " + number);
+      }
+    }
+  </script>
+</body>
+</html>
